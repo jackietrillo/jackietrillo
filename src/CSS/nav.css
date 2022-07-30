@@ -1,0 +1,32 @@
+nav {
+  padding: 3% 0 3% 0%;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul > li {
+    display: inline-block;
+    margin-right: 2%;  
+  }
+  nav ul > li > a {
+    color: #176ceb;
+    color: #555;
+    text-decoration: underline;
+  }
+  nav ul > li > a:hover {
+    color: #000; 
+    color: red;     
+    font-weight: bold;  
+  }
+
+  .disabled {
+    text-decoration: none;
+    color: darkgray;
+  }
+
+  .disabled:hover {
+    text-decoration: none;
+    color: darkgray;
+  }

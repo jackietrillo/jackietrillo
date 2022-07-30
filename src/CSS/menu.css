@@ -1,0 +1,36 @@
+.menu {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .menu-items {
+    list-style: none;
+    margin-left: -200px;
+    background-color: #fff;
+    text-align: left;
+    width: 250px;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    opacity:1;
+   -webkit-animation: fadein 2s; 
+    -moz-animation: fadein 2s; 
+     -ms-animation: fadein 2s; 
+      -o-animation: fadein 2s;
+         animation: fadein 2s;
+  }
+
+  .menu-items > li {
+    padding: 6%;
+  }
+
+  .menu-items > li > a {   
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .menu-items > li > a:hover {
+     color: #176ceb; 
+     color: #000;
+     color: red;
+     font-weight: bold; 
+  }

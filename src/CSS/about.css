@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+}
+
+#about-photo {
+    vertical-align: top;
+    width:200px;
+    height:300px;
+}
+#about-content {
+    width:100%;
+    padding: 5% 0 0 5%;
+    text-align: left;  
+}
+#about-content p {
+    text-align: justify;  
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+        text-align: left;
+    }    
+    #about-photo {
+        width:200px;
+        height:300px;
+    }
+    #about-content {
+        display:inline-block;
+        width:70%;
+        padding: 0 0 0 5%;
+        text-align: left;
+    }
+  }

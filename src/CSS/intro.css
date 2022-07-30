@@ -1,0 +1,18 @@
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: normal;
+    padding: 5% 5%;
+    width: 100%;
+    text-align: justify;
+  }
+  
+  .big-heading {
+    margin: 0px;
+    font-size: clamp(20px, 8vw, 60px);
+    font-size:3rem;
+    color: #555555; 
+    font-weight: 600; 
+  }
+  
