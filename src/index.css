@@ -30,20 +30,26 @@ body {
 .header {
   width: 100%;
   padding: 0em; 
-  background-color: #fff;   
-  /* display: flex;
-  justify-content: space-between;     
-  align-items: center; */
-  min-height: 15vh;
+  /* background-color: #eee;   
+  min-height: 15vh; */
 }
 
 header > h1 {
   color:#ccc; 
 }
 
+header .tagline {
+  text-align: center;
+  font-size: 4vw;
+  color: #ccc;
+  letter-spacing: 5px;
+  font-weight: bold;
+  margin-top: 2%;
+}
+
 main { 
   display: block;
-  padding: 0 2% 2% 2% ;
+  padding: 0 0% 2% 0% ;
   background-color:#fafafa;    
   width: 100%; 
   min-height: 48vh;
@@ -57,42 +63,40 @@ footer {
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 5px;
-  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 5px;  
   letter-spacing: -0.02em;
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
-  text-align: center;
-  color: #555555;
-   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;  */
+  text-align: center;   
   padding: 20px 0;  
 }
 
 .copy {  
   border-top:1px solid #eee;
-  background-color: #ccc;
+  background-color: #555;
   color: white;
 }
 
 div#logo {
   display:inline-block;
   vertical-align: top;
-
 }
 .app-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 #quote {
   display: block;
-  margin-top: 2%;
+  margin-top: 0%;
+  color: #555;
+  background-color: #eee;
+  padding: 2%;
 }
 
 .spacer {
-  display:none;
+  display:block;
   width: 100px;
   height: 2px;
   margin: auto;

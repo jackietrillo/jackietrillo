@@ -3,14 +3,13 @@ import "../CSS/intro.css";
 function Intro() {
   return (
     <div className="intro-container">
-      <h5>Hi, my name is</h5>
-      <h1 className="big-heading">Jackie Trillo.</h1>
+      <h4>Hi,</h4>
+      <h1 className="big-heading">Welcome.</h1>
       <br />
       <p>
-        Welcome to my website. On this site you will find information about me,
-        my skills, and my projects. I’m a software engineer specializing in
-        building Applications in C#/NET and have recently started working with
-        React.
+        On this site you will find information about me, my skills, and my
+        projects. I’m a software engineer specializing in building Applications
+        in C#/NET and have recently started working with React.
       </p>
       <p>
         This site is coded in HTML5/CSS, JavaScript, jQuery, React, Bootstrap

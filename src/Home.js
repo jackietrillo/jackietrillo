@@ -2,6 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Intro from "./Components/Intro";
 import Nav from "./Components/Nav";
+import Quote from "./Components/Quote";
 
 function Home() {
   const randomIndex = Math.ceil(Math.random() * 11);
@@ -10,9 +11,16 @@ function Home() {
     <>
       <Header />
       <main>
-        <img className="home-image fade-in" src={randomImage} />
-        <Intro />
-        <Nav pageName={"Home"} />
+        <div className="row">
+          <div className="col-12" style={{ textAlign: "center" }}>
+            <Quote />
+          </div>
+        </div>
+        <div className="row">
+          <img className="home-image fade-in" src={randomImage} />
+          <Intro />
+          <Nav pageName={"Home"} />
+        </div>
       </main>
       <Footer />
     </>

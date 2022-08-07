@@ -92,14 +92,14 @@ const Contact = () => {
           <div className="float-end">
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn btn-secondary"
               onClick={handleSubmit}
             >
               Send
             </button>
           </div>
         </form>
-      </main>      
+      </main>
       <Nav pageName={"Contact"} />
       <Footer />
     </>
