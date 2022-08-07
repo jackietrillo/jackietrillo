@@ -12,7 +12,7 @@ function Header() {
               </a>
             </div>
           </div>
-          <div className="col-7">
+          <div className="col-8">
             <p className="tagline">jackietrillo.com</p>
           </div>
           <div className="col-2" style={{ textAlign: "left", margin: "auto" }}>
