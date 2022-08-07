@@ -6,14 +6,14 @@ const Resume = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="container-fluid">
+        <h2 className="section-title">Experience</h2>
         <div className="spacer"></div>
-        <br /> <br />
         <div className="row">
           <div className="col-md-12">
             <article className="experience">
               <header className="text-center">
-                <img src="./images/practice-web.png" width="268px" />
+                <img src="./images/practice-web.png" width="300px" />
                 <br />
                 <br />
                 <p>Senior Applications Engineer</p>
@@ -39,7 +39,7 @@ const Resume = () => {
           <div className="col-md-12">
             <article className="">
               <header className="text-center">
-                <img src="./images/fau.png" width="168px" />
+                <img src="./images/fau.png" width="150px" />
                 <h3>Florida Atlantic University</h3>
                 <p>B.S. Computer Science 2004</p>
               </header>

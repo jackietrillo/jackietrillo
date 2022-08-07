@@ -1,11 +1,10 @@
 import Menu from "./Components/Menu";
-import Quote from "./Components/Quote";
 
 function Header() {
   return (
     <>
-      <header className="header shadow-smn p-3">
-        <div className="row">
+      <header className="header container-fluid">
+        <div className="row" style={{ backgroundColor: "#fff" }}>
           <div className="col-2">
             <div id="logo">
               <a href="/">
@@ -13,16 +12,11 @@ function Header() {
               </a>
             </div>
           </div>
-          <div
-            className="col-10"
-            style={{ textAlign: "right", margin: "auto" }}
-          >
-            <Menu />
+          <div className="col-7">
+            <p className="tagline">jackietrillo.com</p>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-12" style={{ textAlign: "center" }}>
-            <Quote />
+          <div className="col-2" style={{ textAlign: "left", margin: "auto" }}>
+            <Menu />
           </div>
         </div>
       </header>

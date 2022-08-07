@@ -20,6 +20,14 @@ function Footer() {
               </p>
               <div className="social-icons">
                 <a
+                  href="https://github.com/jackietrillo"
+                  title="GitHub"
+                  className="btn btn-round btn-clear btn-github"
+                  target="_blank"
+                >
+                  <i class="fa fa-github"></i>
+                </a>
+                <a
                   href="https://twitter.com/intent/tweet?screen_name=jackietrillo"
                   className="btn btn-round btn-clear btn-twitter"
                   target="_blank"
