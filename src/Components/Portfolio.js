@@ -1,174 +1,137 @@
+import React, { useState, useEffect } from "react";
 import Header from "../Header";
 import Nav from "../Components/Nav";
 import Footer from "../Footer";
+import "../CSS/isotope.css";
+import "../CSS/magnific.css";
 
 const Portfolio = () => {
+  useEffect(() => {
+    // init Isotope
+    var $grid = $("#grid").isotope({
+      itemSelector: ".element-item",
+      layoutMode: "fitRows"
+    });
+
+    // filter functions
+    var filterFns = {
+      // show if number is greater than 50
+      numberGreaterThan50: function () {
+        var number = $(this).find(".number").text();
+        return parseInt(number, 10) > 50;
+      },
+      // show if name ends with -ium
+      ium: function () {
+        var name = $(this).find(".name").text();
+        return name.match(/ium$/);
+      }
+    };
+
+    // bind filter button click
+    $("#filters").on("click", "button", function () {
+      var filterValue = $(this).attr("data-filter");
+      // use filterFn if matches value
+      //  filterValue = filterFns[filterValue] || filterValue;
+      $grid.isotope({ filter: filterValue });
+    });
+
+    // bind sort button click
+    $("#sorts").on("click", "button", function () {
+      var sortByValue = $(this).attr("data-sort-by");
+      $grid.isotope({ sortBy: sortByValue });
+    });
+
+    // change is-checked class on buttons
+    $(".button-group").each(function (i, buttonGroup) {
+      var $buttonGroup = $(buttonGroup);
+      $buttonGroup.on("click", "button", function () {
+        $buttonGroup.find(".is-checked").removeClass("is-checked");
+        $(this).addClass("is-checked");
+      });
+    });
+
+    $(".magnific").magnificPopup({
+      type: "image",
+      closeOnContentClick: true,
+      closeBtnInside: false,
+      mainClass: "mfp-with-zoom mfp-img-mobile",
+      image: {
+        verticalFit: true,
+        titleSrc: function (item) {
+          return (
+            item.el.attr("title") +
+            ' &middot; <a class="image-source-link" href="' +
+            item.el.attr("data-source") +
+            '" target="_blank">image source</a>'
+          );
+        }
+      },
+      zoom: {
+        enabled: true
+      }
+    });
+
+    $('button[data-filter=".payments"').click();
+
+  });
+
   return (
     <>
       <Header />
-      <main>
-        <div className="container">
-          <div className="row">
-            <header className="section-header">
-              <h2 className="section-title">
-                <span>Portfolio</span>
-              </h2>
-            </header>
+      <main className="container">
+        <h2 className="section-title">
+          <span>Portfolio</span>
+        </h2>
+        <div className="spacer"></div>
+        <div id="filters" className="button-group">
+          <button className="button is-checked" data-filter=".payments">
+            Online Payments
+          </button>
+          <button className="button" data-filter=".reviews">
+            Social Media Reviews
+          </button>
+          <button className="button" data-filter=".texting">
+            Texting Services
+          </button>
+        </div>
+        <div id="grid" className="grid">
+          <div className="element-item payments" data-category="payments">
+            <a
+              href="/images/portfolio/portfolio-payments.png"
+              data-source="/images/portfolio/portfolio-payments.png"
+              className="magnific"
+              title="blah blah blah"
+            >
+              <div className="overlay">
+                <i className="fa fa-search"></i>
+              </div>
 
-            <div id="grid-controls-wrapper">
-              <ul className="nav nav-pills center-pills grid-controls d-none">
-                <li className="active filter">
-                  <a href="javascript:void(0)" data-filter="*">
-                    All
-                  </a>
-                </li>
-                <li className="filter">
-                  <a href="javascript:void(0)" data-filter=".branding">
-                    Branding
-                  </a>
-                </li>
-                <li className="filter">
-                  <a href="javascript:void(0)" data-filter=".design">
-                    Design
-                  </a>
-                </li>
-                <li className="filter">
-                  <a href="javascript:void(0)" data-filter=".photography">
-                    Photography
-                  </a>
-                </li>
-                <li className="filter">
-                  <a href="javascript:void(0)" data-filter=".web">
-                    Website
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <ul id="grid" className="grid-wrapper d-none">
-                <li className="mix web">
-                  <a href="img/portfolio/large/01.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/01.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix design">
-                  <a href="img/portfolio/large/02.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/02.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix design">
-                  <a href="img/portfolio/large/03.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/03.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix web">
-                  <a href="img/portfolio/large/04.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/04.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix branding">
-                  <a href="img/portfolio/large/05.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/05.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix design">
-                  <a href="img/portfolio/large/06.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/06.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix photography">
-                  <a href="img/portfolio/large/07.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/07.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix photography">
-                  <a href="img/portfolio/large/08.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/08.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix photography">
-                  <a href="img/portfolio/large/09.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/09.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix web">
-                  <a href="img/portfolio/large/10.jpg">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/10.jpg" alt="" />
-                  </a>
-                </li>
-                <li className="mix design">
-                  <a href="img/portfolio/large/11.jpg">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/11.jpg" alt="" />
-                  </a>
-                </li>
-                <li className="mix design">
-                  <a href="img/portfolio/large/12.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/12.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix design">
-                  <a href="img/portfolio/large/13.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/13.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix design">
-                  <a href="img/portfolio/large/14.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/14.png" alt="" />
-                  </a>
-                </li>
-                <li className="mix branding">
-                  <a href="img/portfolio/large/15.png">
-                    <div className="overlay">
-                      <i className="fa fa-search"></i>
-                    </div>
-                    <img src="img/portfolio/small/15.png" alt="" />
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <img src="/images/portfolio/portfolio-payments.png"></img>
+            </a>
+          </div>
+          <div className="element-item reviews" data-category="reviews">
+            <img src="/images/portfolio/portfolio-onlinereviews2.webp"></img>
+          </div>
+          <div className="element-item reviews" data-category="reviews">
+            <img src="/images/portfolio/portfolio-onlinereviews3.webp"></img>
+          </div>
+          <div className="element-item reviews" data-category="reviews">
+            <img src="/images/portfolio/portfolio-onlinereviews5.webp"></img>
+          </div>
+          <div className="element-item reviews" data-category="reviews">
+            <img src="/images/portfolio/portfolio-onlinereviews6.webp"></img>
+          </div>
+          <div className="element-item reviews" data-category="reviews">
+            <img src="/images/portfolio/portfolio-onlinereviews4.webp"></img>
+          </div>
+          <div className="element-item reviews" data-category="reviews">
+            <img src="/images/portfolio/portfolio-onlinereviews5.webp"></img>
+          </div>
+          <div className="element-item reviews" data-category="reviews">
+            <img src="/images/portfolio/portfolio-onlinereviews.webp"></img>
+          </div>
+          <div className="element-item texting" data-category="texting">
+            <img src="/images/portfolio/portfolio-texting.webp"></img>
           </div>
         </div>
       </main>

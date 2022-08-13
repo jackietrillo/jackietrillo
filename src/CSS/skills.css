@@ -10,9 +10,9 @@
 
 .skill {
     display:inline-block;   
-    margin-bottom: 10%;
+    margin-bottom: 15%;
     opacity: 0.8;
-    margin-left: 6%;
+    margin-left: 18%;
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1s; /* Firefox < 16 */
      -ms-animation: fadein 1s; /* Internet Explorer */
@@ -21,8 +21,8 @@
 }
 
 .skill img {
-   width: 150px;
-   height: 150px;
+   width: 200px;
+   height: 200px;
 }
 
 .skill span {

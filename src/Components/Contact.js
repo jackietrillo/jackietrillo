@@ -9,14 +9,14 @@ const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
-    message: "",
+    message: ""
   });
 
   const handleChange = function (event) {
     setContactData((prevData) => {
       return {
         ...prevData,
-        [event.target.name]: event.target.value,
+        [event.target.name]: event.target.value
       };
     });
     console.log(contactData);
@@ -34,7 +34,7 @@ const Contact = () => {
       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
       `   <div>${message}</div>`,
       '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-      "</div>",
+      "</div>"
     ].join("");
     console.log(alertPlaceholder);
     alertPlaceholder.append(wrapper);
@@ -92,7 +92,7 @@ const Contact = () => {
           <div className="float-end">
             <button
               type="submit"
-              className="btn btn-secondary"
+              className="btn btn-primary"
               onClick={handleSubmit}
             >
               Send
