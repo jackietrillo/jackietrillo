@@ -45,7 +45,16 @@ export default function Skills() {
         $(this).addClass("is-checked");
       });
     });
-  });
+
+    return function cleanUp() {
+      console.log("running cleanup");
+      $("#filters").off("click", "button");
+      $(".button-group").each(function (i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.off("click", "button");
+      });
+    };
+  }, []);
 
   return (
     <>

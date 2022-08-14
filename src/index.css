@@ -45,6 +45,13 @@ header .tagline {
   letter-spacing: 7px;
   font-weight: bold;
   margin-top: 0%;
+  display:none;
+}
+
+@media only screen and (min-width: 769px) {
+  header .tagline { 
+    display: block;
+  }
 }
 
 main { 
@@ -92,8 +99,8 @@ div#logo {
   display: block;
   margin-top: 0%;
   color: #555;
-  background-color: #eee;
-  padding: 2%;
+  background-color: #eee;  
+  padding: 3%;
 }
 
 .spacer {

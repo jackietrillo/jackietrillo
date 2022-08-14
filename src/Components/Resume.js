@@ -13,7 +13,7 @@ const Resume = () => {
           <div className="col-md-12">
             <article className="experience">
               <header className="text-center">
-                <img src="./images/practice-web.png" width="300px" />
+                <img src="./images/practice-web.png" width="180px" />
                 <br />
                 <br />
                 <p>Senior Applications Engineer</p>
@@ -26,7 +26,7 @@ const Resume = () => {
           <div className="col-md-12">
             <article className="experience">
               <header className="text-center">
-                <img src="./images/oracle.png" width="268px" />
+                <img src="./images/oracle.png" width="150px" />
                 <p>Senior Software Engineer </p>
                 <p>
                   Redwood City, CA <span>&nbsp;</span>(2006 - 2017)
@@ -39,7 +39,7 @@ const Resume = () => {
           <div className="col-md-12">
             <article className="">
               <header className="text-center">
-                <img src="./images/fau.png" width="150px" />
+                <img src="./images/fau.png" width="80px" />
                 <h3>Florida Atlantic University</h3>
                 <p>B.S. Computer Science 2004</p>
               </header>

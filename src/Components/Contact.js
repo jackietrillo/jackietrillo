@@ -84,7 +84,7 @@ const Contact = () => {
               name="message"
               placeholder="Message"
               columns="20"
-              rows="10"
+              rows="8"
               onChange={handleChange}
             ></textarea>
             <small className="form-text text-muted">* required</small>
@@ -99,6 +99,8 @@ const Contact = () => {
             </button>
           </div>
         </form>
+        <br />
+        <br />
       </main>
       <Nav pageName={"Contact"} />
       <Footer />
