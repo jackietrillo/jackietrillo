@@ -27,10 +27,10 @@ function Menu() {
               <Link to="/Skills">Skills</Link>
             </li>
             <li>
-              <Link to="/Resume">Resume</Link>
+              <Link to="/Portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link to="/Portfolio">Portfolio</Link>
+              <Link to="/Resume">Experience</Link>
             </li>
             <li>
               <Link to="/About">About</Link>

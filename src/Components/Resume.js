@@ -40,7 +40,7 @@ const Resume = () => {
             <article className="">
               <header className="text-center">
                 <img src="./images/fau.png" width="80px" />
-                <h3>Florida Atlantic University</h3>
+                <p>Florida Atlantic University</p>
                 <p>B.S. Computer Science 2004</p>
               </header>
             </article>

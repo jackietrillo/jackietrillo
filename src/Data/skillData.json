@@ -4,62 +4,69 @@
     "name": "C#/NET",
     "imageUrl": "images/skills/csharp.png",
     "targetUrl": "https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0",
-    "category" : "languages"
+    "category": "languages"
   },
   {
     "id": 2,
     "name": "Html5",
     "imageUrl": "images/skills/html5.png",
     "targetUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    "category" : "languages"
+    "category": "languages"
   },
   {
     "id": 3,
     "name": "CSS",
     "imageUrl": "images/skills/css.png",
     "targetUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    "category" : "languages"
+    "category": "languages"
   },
   {
     "id": 4,
     "name": "JavaScript",
     "imageUrl": "images/skills/javascript.png",
     "targetUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    "category" : "languages"
+    "category": "languages"
   },
   {
     "id": 5,
     "name": "jQuery",
     "imageUrl": "images/skills/jquery.png",
     "targetUrl": "https://api.jquery.com/",
-    "category" : "frameworks"
+    "category": "frameworks"
   },
   {
     "id": 6,
     "name": "node.js",
     "imageUrl": "images/skills/node.png",
     "targetUrl": "https://nodejs.org/en/docs/",
-    "category" : "frameworks"
+    "category": "frameworks"
   },
   {
     "id": 7,
     "name": "React",
     "imageUrl": "images/skills/react.png",
     "targetUrl": "https://reactjs.org/docs/getting-started.html",
-    "category" : "frameworks"
+    "category": "frameworks"
   },
   {
     "id": 8,
     "name": "Sql Server",
     "imageUrl": "images/skills/sqlserver.png",
     "targetUrl": "https://docs.microsoft.com/en-us/sql/sql-server",
-    "category" : "databases"
+    "category": "databases"
   },
   {
     "id": 9,
     "name": "Git",
     "imageUrl": "images/skills/git.png",
     "targetUrl": "https://git-scm.com/docs",
-    "category" : "tooling"
+    "category": "tooling"
+  },
+  {
+    "id": 10,
+    "name": "PowerShell",
+    "imageUrl": "images/skills/powershell.png",
+    "targetUrl": "https://docs.microsoft.com/en-us/powershell",
+    "category": "tooling"
   }
 ]

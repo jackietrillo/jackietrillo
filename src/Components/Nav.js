@@ -21,18 +21,18 @@ const Nav = (props) => {
           </li>
           <li>
             <Link
-              to="/Resume"
-              className={props.pageName == "Resume" ? "disabled" : ""}
-            >
-              Resume
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/Portfolio"
               className={props.pageName == "Portfolio" ? "disabled" : ""}
             >
               Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Resume"
+              className={props.pageName == "Resume" ? "disabled" : ""}
+            >
+              Experience
             </Link>
           </li>
           <li>

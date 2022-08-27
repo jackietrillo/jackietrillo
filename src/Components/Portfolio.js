@@ -2,10 +2,33 @@ import React, { useState, useEffect } from "react";
 import Header from "../Header";
 import Nav from "../Components/Nav";
 import Footer from "../Footer";
+import portData from "../Data/portData";
 import "../CSS/isotope.css";
 import "../CSS/magnific.css";
 
 const Portfolio = () => {
+  const [items, setItems] = React.useState(portData);
+
+  const portfolioElements = items.map((item) => {
+    let CSS = "element-item " + item.category;
+
+    return (
+      <div className={CSS} key={item.id} data-category={item.category}>
+        <a
+          href={item.imageUrl}
+          data-source={item.imageUrl}
+          className="magnific"
+          title={item.description}
+        >
+          <div className="overlay">
+            <i className="fa fa-search"></i>
+          </div>
+          <img src={item.imageUrl}></img>
+        </a>
+      </div>
+    );
+  });
+
   useEffect(() => {
     var $grid = $(".grid").isotope({
       itemSelector: ".element-item",
@@ -68,55 +91,19 @@ const Portfolio = () => {
         <div className="spacer"></div>
         <div id="filters" className="button-group">
           <button className="button is-checked" data-filter=".payments">
-            Online Payments
+           Payments
           </button>
           <button className="button" data-filter=".reviews">
-            Social Media Reviews
+            Reviews
+          </button>
+          <button className="button" data-filter=".marketing">
+            Marketing
           </button>
           <button className="button" data-filter=".texting">
-            Texting Services
+            Texting 
           </button>
         </div>
-        <div className="grid">
-          <div className="element-item payments" data-category="payments">
-            <a
-              href="/images/portfolio/portfolio-payments.png"
-              data-source="/images/portfolio/portfolio-payments.png"
-              className="magnific"
-              title="blah blah blah"
-            >
-              <div className="overlay">
-                <i className="fa fa-search"></i>
-              </div>
-
-              <img src="/images/portfolio/portfolio-payments.png"></img>
-            </a>
-          </div>
-          <div className="element-item reviews" data-category="reviews">
-            <img src="/images/portfolio/portfolio-onlinereviews2.webp"></img>
-          </div>
-          <div className="element-item reviews" data-category="reviews">
-            <img src="/images/portfolio/portfolio-onlinereviews3.webp"></img>
-          </div>
-          <div className="element-item reviews" data-category="reviews">
-            <img src="/images/portfolio/portfolio-onlinereviews5.webp"></img>
-          </div>
-          <div className="element-item reviews" data-category="reviews">
-            <img src="/images/portfolio/portfolio-onlinereviews6.webp"></img>
-          </div>
-          <div className="element-item reviews" data-category="reviews">
-            <img src="/images/portfolio/portfolio-onlinereviews4.webp"></img>
-          </div>
-          <div className="element-item reviews" data-category="reviews">
-            <img src="/images/portfolio/portfolio-onlinereviews5.webp"></img>
-          </div>
-          <div className="element-item reviews" data-category="reviews">
-            <img src="/images/portfolio/portfolio-onlinereviews.webp"></img>
-          </div>
-          <div className="element-item texting" data-category="texting">
-            <img src="/images/portfolio/portfolio-texting.webp"></img>
-          </div>
-        </div>
+        <div className="grid">{portfolioElements}</div>
       </main>
       <Nav pageName={"Portfolio"} />
       <Footer />

@@ -46,6 +46,8 @@ export default function Skills() {
       });
     });
 
+    $("#button-languages").click();
+
     return function cleanUp() {
       console.log("running cleanup");
       $("#filters").off("click", "button");
@@ -64,11 +66,18 @@ export default function Skills() {
         <div className="spacer"></div>
         <div id="filters" className="button-group">
           {" "}
-          <button className="button is-checked" data-filter="*">
+          <button className="button" data-filter="*">
             Show All
           </button>
-          <button className="button" data-filter=".languages">
+          <button
+            id="button-languages"
+            className="button is-checked"
+            data-filter=".languages"
+          >
             Languages
+          </button>
+          <button className="button is-checked" data-filter=".frameworks">
+            Frameworks
           </button>
           <button className="button" data-filter=".databases">
             Databases
@@ -77,7 +86,7 @@ export default function Skills() {
             Tooling
           </button>
         </div>
-        <div className="grid skill-container">{skillElements} </div>
+        <div className="grid skill-container">{skillElements}</div>
       </main>
       <Nav pageName={"Skills"} />
       <Footer />
