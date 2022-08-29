@@ -83,7 +83,7 @@ export default function Skills() {
             Databases
           </button>
           <button className="button" data-filter=".tooling">
-            Tooling
+            DevOps
           </button>
         </div>
         <div className="grid skill-container">{skillElements}</div>

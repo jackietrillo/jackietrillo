@@ -57,16 +57,30 @@
   },
   {
     "id": 9,
+    "name": "Azure",
+    "imageUrl": "images/skills/azure.png",
+    "targetUrl": "https://docs.microsoft.com/en-us/azure/",
+    "category": "tooling"
+  },
+  {
+    "id": 10,
     "name": "Git",
     "imageUrl": "images/skills/git.png",
     "targetUrl": "https://git-scm.com/docs",
     "category": "tooling"
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "PowerShell",
     "imageUrl": "images/skills/powershell.png",
     "targetUrl": "https://docs.microsoft.com/en-us/powershell",
     "category": "tooling"
+  },  
+  {
+    "id": 12,
+    "name": "MySql",
+    "imageUrl": "images/skills/mysql.png",
+    "targetUrl": "https://dev.mysql.com/doc/refman/8.0/en/",
+    "category": "databases"
   }
 ]
