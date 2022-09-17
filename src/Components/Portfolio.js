@@ -58,7 +58,7 @@ const Portfolio = () => {
         titleSrc: function (item) {
           return (
             item.el.attr("title") +
-            ' &middot; <a class="image-source-link" href="' +
+            ' &middot; <a className="image-source-link" href="' +
             item.el.attr("data-source") +
             '" target="_blank">image source</a>'
           );
@@ -91,7 +91,7 @@ const Portfolio = () => {
         <div className="spacer"></div>
         <div id="filters" className="button-group">
           <button className="button is-checked" data-filter=".payments">
-           Payments
+            Payments
           </button>
           <button className="button" data-filter=".reviews">
             Reviews
@@ -100,7 +100,7 @@ const Portfolio = () => {
             Marketing
           </button>
           <button className="button" data-filter=".texting">
-            Texting 
+            Texting
           </button>
         </div>
         <div className="grid">{portfolioElements}</div>

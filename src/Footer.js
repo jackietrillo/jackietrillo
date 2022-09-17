@@ -25,7 +25,7 @@ function Footer() {
                   className="btn btn-round btn-clear btn-github"
                   target="_blank"
                 >
-                  <i class="fa fa-github"></i>
+                  <i className="fa fa-github"></i>
                 </a>
                 <a
                   href="https://twitter.com/intent/tweet?screen_name=jackietrillo"
