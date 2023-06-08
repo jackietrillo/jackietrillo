@@ -10,13 +10,13 @@ function Footer() {
           <div className="row">
             <div className="col-md-12 contact-info">
               <p>
-                <i className="fa fa-phone"></i> (954) 260-5782
+                <i className="fa fa-phone"></i> (XXX) XXX-XXXX
               </p>
               <p>
                 <a href="mailto:jackietrillo@outlook.com">
                   <i className="fa fa-envelope-o" />
                 </a>{" "}
-                jackietrillo@outlook.com
+                jtrillo@gmail.com
               </p>
               <div className="social-icons">
                 <a
